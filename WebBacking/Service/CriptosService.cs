@@ -19,6 +19,11 @@ namespace WebBacking.Service
             _baseurl = builder.GetSection("ApiSettings:baseUrl").Value;
         }
 
+        /// <summary>
+        /// Lista de criptomonedas, extraidas desde la api
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
         public async Task<List<CriptoPrecioModel>> Lista(string token) 
         {
             try

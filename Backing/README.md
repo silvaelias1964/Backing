@@ -1,4 +1,4 @@
-# Backing
+# ApiBacking
 Api de desafio backend, de manejo básico de criptomonedas.
 Tecnología usada: 
 API WEB: Microsoft .NET Core 7.0, lenguaje C#, patrón MVC.
@@ -20,6 +20,8 @@ Base de datos: Microsoft SQL Server 2012
    Repository: Clases repositorios de las entidades, define las estructuras de los metodos de los CRUD.
    Data: Contiene las clases de las entidades y la clase que define el contexto de la BD. 
    Bd: Script de base de datos y relacionados.
+8. Para probarlo de forma independiente, se ejecuta y listo, para usarlo con la app que la consume, ejecutar el proyecto WebBacking 
+   como el principal, luego desde VS, ejecutar una nueva instancia de ApiBacking.
 
  
 

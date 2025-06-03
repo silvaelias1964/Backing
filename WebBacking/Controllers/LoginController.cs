@@ -17,10 +17,15 @@ namespace WebBacking.Controllers
             this.autenticarApiservice = autenticarApiService;
         }
 
+        /// <summary>
+        /// Formulario de login
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Login()
         {
             return View();
         }
+
 
         [HttpPost]
         public async Task<IActionResult> Login(string correo, string clave) 

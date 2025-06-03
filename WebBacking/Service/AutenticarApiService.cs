@@ -25,11 +25,15 @@ namespace WebBacking.Service
 
         }
 
-
+        /// <summary>
+        /// Login y obtención del token JWT de la api
+        /// </summary>
+        /// <param name="correo"></param>
+        /// <param name="clave"></param>
+        /// <returns></returns>
         public async Task<Usuario> GetLogin(string correo, string clave)
         {
-            //var cliente = new HttpClient();
-            //cliente.BaseAddress = new Uri(_baseurl);
+            
             var credenciales = new Usuario() { 
                 correo = correo, 
                 clave = clave 
@@ -42,15 +46,10 @@ namespace WebBacking.Service
                     handler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
                     using (HttpClient cliente = new HttpClient(handler))
                     {
-                        //string response = await client.GetStringAsync(_url);
-                        //var data = JsonConvert.DeserializeObject<TadawulModeList>(response);
-                        //return Ok(data);
 
                         var content = new StringContent(JsonConvert.SerializeObject(credenciales), Encoding.UTF8, "application/json");
                         var response = await cliente.PostAsync($"{_baseurl}api/Token", content);
                         var json_response = await response.Content.ReadAsStringAsync();
-                        //var resultado = JsonConvert.DeserializeObject<ResultadoToken>(json_response);
-                        //_token = resultado.token;
 
                         _token = json_response;
 

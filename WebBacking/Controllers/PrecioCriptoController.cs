@@ -17,7 +17,10 @@ namespace WebBacking.Controllers
             this.criptosService = criptosService;
         }
 
-
+        /// <summary>
+        /// Generar listado de criptomonedas, basado en la api.
+        /// </summary>
+        /// <returns></returns>
         // GET: PrecioCriptoController
         public async Task<IActionResult> Index()
         {
