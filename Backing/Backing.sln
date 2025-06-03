@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiBacking", "ApiBacking.csproj", "{853B3BA5-D8F2-46C4-B6A5-E42251B8FC2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBacking", "..\WebBacking\WebBacking.csproj", "{FCDA3DCD-F3CF-4C1D-B40E-2666ED84D8DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{853B3BA5-D8F2-46C4-B6A5-E42251B8FC2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{853B3BA5-D8F2-46C4-B6A5-E42251B8FC2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{853B3BA5-D8F2-46C4-B6A5-E42251B8FC2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{853B3BA5-D8F2-46C4-B6A5-E42251B8FC2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCDA3DCD-F3CF-4C1D-B40E-2666ED84D8DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCDA3DCD-F3CF-4C1D-B40E-2666ED84D8DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCDA3DCD-F3CF-4C1D-B40E-2666ED84D8DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCDA3DCD-F3CF-4C1D-B40E-2666ED84D8DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6D7A7D0-C90F-40B4-9161-C1EE0A54F9B8}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,42 @@
+﻿@using WebBacking.Models;
+@model IEnumerable<CriptoPrecioModel>
+
+<div class="card shadow md-4">
+    <div class="card-body">
+        <div class="row">
+            <div class="col">
+                <h2>Listado de Criptos</h2>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>CriptoId</th>
+                        <th>MonedaId</th>
+                        <th>Precio</th>
+                        <th>Fecha Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem=>item.prcId)</td>
+                            <td>@Html.DisplayFor(modelItem => item.crmId)</td>
+                            <td>@Html.DisplayFor(modelItem => item.monId)</td>
+                            <td>@Html.DisplayFor(modelItem => item.prcPrecio)</td>
+                            <td>@Html.DisplayFor(modelItem => item.prcPrecioFecha)</td>
+
+                        </tr>    
+                    
+                    
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+</div>
