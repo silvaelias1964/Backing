@@ -4,6 +4,16 @@ using WebBacking.Service.IService;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Habilita CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("PermiteTodo",
+        builder => builder.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader());
+});
+
+
 // Agregar servicios en el contenedor.
 builder.Services.AddControllersWithViews();
 
@@ -28,6 +38,9 @@ builder.Services.AddSession(options =>
 });
 
 var app = builder.Build();
+
+app.UseCors("PermiteTodo"); // Aplica política de CORS
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
